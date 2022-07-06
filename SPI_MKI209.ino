@@ -1,3 +1,7 @@
+//pin connection
+//Arudino SPI interface
+//sensor board INT1 and INT2 connect to GND
+
 #include <SPI.h>
 const int CS=10;
 byte accelX0, accelY0, accelZ0,tempL,tempH;
