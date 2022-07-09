@@ -1,6 +1,12 @@
 //pin connection
 //Arudino SPI interface
 //sensor board INT1 and INT2 connect to GND
+//SPC -> Clk
+//SDI -> MOSI(COPI)
+//SDO -> MISO(CIPO)
+//CS -> SS(CS)
+//documentation link https://www.st.com/resource/en/datasheet/iis2iclx.pdf
+//not FIFO output
 
 #include <SPI.h>
 const int CS=10;
