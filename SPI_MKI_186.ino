@@ -36,10 +36,10 @@ void setupData() {
   //20h
   digitalWrite(CS, LOW);
   SPI.transfer(0x20);//
-  SPI.transfer(0x80);
+  SPI.transfer(0x00);
   digitalWrite(CS, HIGH);
 
-  
+
   //21h
   digitalWrite(CS, LOW);
   SPI.transfer(0x21);
@@ -93,12 +93,12 @@ void callself() {
 void readtemp() {
   //Temp_L(25h) Temp_H(26h)
   digitalWrite(CS, LOW);
-  //SPI.transfer(0xA5);
+  SPI.transfer(0xA5);
   tempL = SPI.transfer(0xA5);
   digitalWrite(CS, HIGH);
 
   digitalWrite(CS, LOW);
-  //SPI.transfer(0xA6);
+  SPI.transfer(0xA6);
   tempH = SPI.transfer(0xA6);
   digitalWrite(CS, HIGH);
   //two's complement with 0LSB=25degree and 16 digit/degree
